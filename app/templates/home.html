@@ -1,0 +1,38 @@
+{%extends 'base.html'  %}
+{% block content %}
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="home">
+    <h2 class="w3-wide">Thanks Therapy!</h2>
+
+
+        <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png') }}" class="w3-round w3-margin-top" alt="thanks_therapy_logo" style="width:80%">
+
+    <p class="justify">
+    <p>Welcome to the home of the Thanks Therapy podcast. Here you will find all the latest information about the podcast, transcripts of the episodes, additional blog posts, and resources. You can learn a bit more about your hosts Hannah and Emma. You can find out about upcoming episodes and how you can support us. </p>
+    <p>You can also contact us and we would love to hear from you. Use our online form or email us at thankstherapy@gmail.com. You can send us your problem to be responded to on the podcast or send your comments, colaberation requests or compliments. And dont forget to rate, review or subscribe on your preferred listening app.</p>
+    <p>Thanks for visiting the website, thanks for listening and thanks therapy!!</p>
+
+    <iframe src="https://open.spotify.com/embed-podcast/show/70eyBkY0kedgtTI6JC79Rt" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+        <div class="w3-third w3-margin-bottom">
+            <a href="" target="_blank">
+                <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png' )}}" alt="thanks_therapy_logo"  style="width:100%" class="w3-hover-opacity">
+            </a>
+          <div class="w3-container w3-white">
+            <p><b>Click above to read some our favourite therapy inspired blogs!</b></p>
+            <p></p>
+          </div>
+        </div>
+
+         <div class="w3-third w3-margin-bottom">
+            <a href="" target="_blank">
+                <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png' )}}" alt="thanks_therapy_logo"  style="width:100%" class="w3-hover-opacity">
+            </a>
+          <div class="w3-container w3-white">
+            <p><b>Audio not enough? Have a read at our transcripts from every episode</b></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+</div>
+{% endblock %}
