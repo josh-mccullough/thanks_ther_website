@@ -1,11 +1,26 @@
 {%extends 'base.html'  %}
 {% block content %}
 
-<div class="gallery">
-    <a target="_blank" href="{{ url_for('static', filename='transcripts/dummy.pdf') }}">
-    <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png') }}" alt="Cinque Terre" width="600" height="400">
-    </a>
-<div class="desc">Add a description of the image here</div>
 
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:3000px" id="home">
+
+    <div class="gallery">
+
+        <div class="imag_text">
+            <a href="{{ url_for('static', filename='transcripts/Transcript_of_Episode_1_Where_to_Begin.pdf' )}}">
+                <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png' )}}">
+            </a>
+            <p>Episode 1 Where to begin?</p>
+
+        </div>
+
+        <div class="imag_text">
+            <a href="{{ url_for('static', filename='transcripts/Transcript_of_Episode_1_Where_to_Begin.pdf' )}}">
+                <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png' )}}">
+            </a>
+            <p>Episode 2: Other types of therapy are available</p>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
