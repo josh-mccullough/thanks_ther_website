@@ -1,5 +1,5 @@
 from flask import request, render_template, session, redirect
-from app import app
+from app import app, util
 
 
 @app.route('/')
@@ -22,7 +22,7 @@ def blogs():
 @app.route('/transcripts', methods=["GET", "POST"])
 def transcripts():
     if request.method == "GET":
-        return render_template("transcripts.html")
+        return render_template("transcripts.html", transcript_files=util.get_transcripts("C:/Users/jam00/Documents/thanks_ther_website/app/static/transcripts"))
 
 
 @app.route('/about', methods=["GET", "POST"])

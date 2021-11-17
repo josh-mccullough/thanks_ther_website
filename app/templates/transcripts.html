@@ -1,26 +1,17 @@
 {%extends 'base.html'  %}
 {% block content %}
-
-
 <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:3000px" id="home">
-
-    <div class="gallery">
-
-        <div class="imag_text">
-            <a href="{{ url_for('static', filename='transcripts/Transcript_of_Episode_1_Where_to_Begin.pdf' )}}">
-                <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png' )}}">
-            </a>
-            <p>Episode 1 Where to begin?</p>
-
-        </div>
-
-        <div class="imag_text">
-            <a href="{{ url_for('static', filename='transcripts/Transcript_of_Episode_1_Where_to_Begin.pdf' )}}">
-                <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png' )}}">
-            </a>
-            <p>Episode 2: Other types of therapy are available</p>
-        </div>
-    </div>
+        {% for k in transcript_files %}
+                <div class="w3-third w3-margin-bottom">
+                    <a href="{{ url_for('static', filename='transcripts/{{k}}' )}}" target="_blank">
+                        <img src="{{ url_for('static', filename='Images/cropped-thanks-therapy-logo.png' )}}" alt="thanks_therapy_logo"  style="width:50%" class="w3-hover-opacity">
+                    </a>
+                    <div class="w3-container w3-white">
+                        <p><b>Episode 2: There are other types of therapy available!</b></p>
+                    <p></p>
+                    </div>
+                </div>
+            {% endfor %}
 </div>
 
 {% endblock %}
